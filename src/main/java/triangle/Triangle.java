@@ -46,17 +46,20 @@ public class Triangle {
         return distinctIntegers;
     }
 
+    //All sides has different length
     public boolean isScalene() {
-        return uniqueSides() == 3;
+        return uniqueSides() == 1;
     }
 
+    //All sides has same length
     public boolean isEquilateral() {
-        if (uniqueSides() == 1) {
+        if (uniqueSides() == 3) {
             return true;
         }
         return false;
     }
 
+    //Two equal sides
     public boolean isIsosceles() {
         if (uniqueSides() == 2) {
             return true;

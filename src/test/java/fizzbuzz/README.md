@@ -1,6 +1,8 @@
 #FizzBuzz
 
-Write a program that returns array of numbers from 1 to 100, while multiples of three return "Fizz" instead of the number, multiples of five return "Buzz".
+Write a program that returns array of numbers from 1 to 100, 
+while multiples of three return "Fizz" instead of the number, 
+multiples of five return "Buzz".
 Multiples of both three and five return "FizzBuzz".
 
 * Add a way to change range, instead of printing numbers from 1 to 100.
