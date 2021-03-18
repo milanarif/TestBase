@@ -44,5 +44,12 @@ public class LIFOStackTest {
         assertThat(lifoStack.pop()).isEqualTo(2);
     }
 
+    @Test
+    void pushPopIsEmpty() {
+        lifoStack.push(1);
+        lifoStack.pop();
+        assertThat(lifoStack.empty()).isTrue();
+    }
+
 
 }
