@@ -14,5 +14,11 @@ public class LIFOStackTest {
         assertThat(lifoStack.empty()).isTrue();
     }
 
+    @Test
+    void afterPushEmptyIsFalse() {
+        lifoStack.push(1);
+        assertThat(lifoStack.empty()).isFalse();
+    }
+
 
 }
