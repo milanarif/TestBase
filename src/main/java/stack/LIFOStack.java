@@ -11,4 +11,8 @@ public class LIFOStack {
     public void push(int i) {
         empty = false;
     }
+
+    public int pop() {
+        throw new IllegalStateException();
+    }
 }
