@@ -14,7 +14,7 @@ public class InvoiceView {
         invoiceDao.save(new Invoice("ICA Mini",50.0));
         invoiceDao.save(new Invoice("Enegårdens kött",101.0));
 
-        InvoiceFilter filter = new InvoiceFilter();
+        InvoiceFilter filter = new InvoiceFilter(new InvoiceH2Dao());
         filter.filter().forEach(this::printInvoice);
     }
 

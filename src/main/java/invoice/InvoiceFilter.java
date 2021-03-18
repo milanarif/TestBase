@@ -5,9 +5,14 @@ import java.util.stream.Collectors;
 
 public class InvoiceFilter {
 
+
+    InvoiceDao invoiceDao;
+
+    public InvoiceFilter(InvoiceDao invoiceDao) {
+        this.invoiceDao = invoiceDao;
+    }
+
     public List<Invoice> filter() {
-        //Must be modified to use dependency inversion
-        InvoiceDao invoiceDao = new InvoiceH2Dao();
         List<Invoice> allInvoices = invoiceDao.all();
 
         return allInvoices.stream()
