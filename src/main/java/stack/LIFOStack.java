@@ -1,24 +1,24 @@
 package stack;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LIFOStack {
 
-    private boolean empty = true;
-    private int value;
+    private final List<Integer> values = new ArrayList<>();
 
     public boolean empty() {
-        return empty;
+        return values.isEmpty();
     }
 
     public void push(int i) {
-        empty = false;
-        value = i;
+        values.add(i);
     }
 
     public int pop() {
-        if (empty)
+        if (empty())
             throw new IllegalStateException();
 
-        empty = true;
-        return value;
+        return values.remove(values.size() - 1);
     }
 }
