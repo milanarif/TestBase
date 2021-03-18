@@ -3,6 +3,7 @@ package stack;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
@@ -68,6 +69,19 @@ public class LIFOStackTest {
         assertThat(lifoStack.pop()).isEqualTo(3);
         assertThat(lifoStack.pop()).isEqualTo(2);
         assertThat(lifoStack.pop()).isEqualTo(1);
+    }
+
+    @Test
+    void argumentException() {
+
+        //AssertJ
+        assertThatExceptionOfType(IllegalArgumentException.class)
+                .isThrownBy(() -> lifoStack.push(-1))
+                .withMessage("Invalid value: -1");
+
+        //Junit5 assert
+        var ex = assertThrows(IllegalArgumentException.class, () -> lifoStack.push(-1));
+        assertEquals("Invalid value: -1", ex.getMessage());
     }
 
 

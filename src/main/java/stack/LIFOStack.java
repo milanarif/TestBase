@@ -12,6 +12,9 @@ public class LIFOStack {
     }
 
     public void push(int i) {
+        if (i == -1)
+            throw new IllegalArgumentException("Invalid value: -1");
+
         values.add(i);
     }
 
