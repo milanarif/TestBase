@@ -31,5 +31,11 @@ public class LIFOStackTest {
         assertThatIllegalStateException().isThrownBy(() -> lifoStack.pop());
     }
 
+    @Test
+    void pushThenPop() {
+        lifoStack.push(1);
+        assertThat(lifoStack.pop()).isEqualTo(1);
+    }
+
 
 }

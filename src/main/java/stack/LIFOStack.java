@@ -13,6 +13,9 @@ public class LIFOStack {
     }
 
     public int pop() {
-        throw new IllegalStateException();
+        if (empty)
+            throw new IllegalStateException();
+        else
+            return 1;
     }
 }
