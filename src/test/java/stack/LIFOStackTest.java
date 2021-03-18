@@ -37,5 +37,12 @@ public class LIFOStackTest {
         assertThat(lifoStack.pop()).isEqualTo(1);
     }
 
+    @Test
+    void pushTwiceThenPop() {
+        lifoStack.push(1);
+        lifoStack.push(2);
+        assertThat(lifoStack.pop()).isEqualTo(2);
+    }
+
 
 }
